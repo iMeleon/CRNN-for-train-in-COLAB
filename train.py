@@ -61,6 +61,17 @@ def run_training():
     lbl_enc = preprocessing.LabelEncoder()
     lbl_enc.fit(targets_flat)
     targets_enc = [lbl_enc.transform(x) for x in targets]
+    # print(targets_enc)
+    # new_targets_enc= []
+    # for i,target in enumerate(targets_enc):
+    #   tmp = np.array([-1,-1,-1,-1,-1])
+    #   for idx, item in enumerate(target):
+    #     # print(idx)
+    #     # print('i',i)
+    #     tmp[idx] = item
+    #     # print(image_files[i])
+    #   new_targets_enc.append(tmp)
+    # print(new_targets_enc)
     targets_enc = np.array(targets_enc)
     targets_enc = targets_enc + 1
 
