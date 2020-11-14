@@ -47,8 +47,8 @@ def decode_predictions(preds, encoder):
             else:
                 p = encoder.inverse_transform([k])[0]
                 temp.append(p)
-        tp = "".join(temp).replace("§", "")
-        cap_preds.append(remove_duplicates(tp))
+        tp = "".join(temp)
+        cap_preds.append(remove_duplicates(tp).replace("§", ""))
     return cap_preds
 
 
