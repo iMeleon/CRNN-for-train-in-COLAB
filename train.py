@@ -131,7 +131,7 @@ def run_training():
             f"Epoch={epoch}, Train Loss={train_loss}, Test Loss={test_loss} Accuracy={accuracy}"
         )
         scheduler.step(test_loss)
-
+        torch.save(model, config.MODEL_SAVE_PATH)
 
 if __name__ == "__main__":
     run_training()
