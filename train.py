@@ -126,7 +126,7 @@ def run_training():
             valid_captcha_preds.extend(current_preds)
         combined = list(zip(test_targets_orig, valid_captcha_preds))
         print(combined[:10])
-        test_dup_rem = [remove_duplicates(c) for c in test_targets_orig]
+        test_dup_rem = test_targets_orig
         accuracy = metrics.accuracy_score(test_dup_rem, valid_captcha_preds)
         print(
             f"Epoch={epoch}, Train Loss={train_loss}, Test Loss={test_loss} Accuracy={accuracy}"
