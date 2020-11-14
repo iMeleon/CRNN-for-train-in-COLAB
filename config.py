@@ -1,5 +1,6 @@
 DATA_DIR = "/content/gdrive/My Drive/darknet/bin/darknet/stack_rcnn_2_new"
 MODEL_SAVE_PATH = "/content/gdrive/My Drive/darknet/bin/darknet/weights/model.pth"
+LABEL_ENCODER_SAVE_PATH = "/content/gdrive/My Drive/darknet/bin/darknet/weights/classes.npy"
 BATCH_SIZE = 1
 IMAGE_WIDTH = 150
 IMAGE_HEIGHT = 38

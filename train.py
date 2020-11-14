@@ -60,6 +60,7 @@ def run_training():
 
     lbl_enc = preprocessing.LabelEncoder()
     lbl_enc.fit(targets_flat)
+    np.save(config.LABEL_ENCODER_SAVE_PATH, lbl_enc.classes_)
     targets_enc = [lbl_enc.transform(x) for x in targets]
     # print(targets_enc)
     # new_targets_enc= []
